@@ -1,0 +1,11 @@
+demo:
+  command: flask run --host=0.0.0.0
+  build: .
+  environment:
+    - FLASK_APP=main.py
+    - FLASK_ENV=development
+  working_dir: /data
+  volumes:
+    - '.:/data'
+  ports:
+    - "5000:5000"
